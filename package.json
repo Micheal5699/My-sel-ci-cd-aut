@@ -1,0 +1,22 @@
+{
+  "name": "my-sel-ci-cd-aut",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Micheal5699/My-sel-ci-cd-aut.git"
+  },
+  "author": "Popoola Ibukun Micheal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Micheal5699/My-sel-ci-cd-aut/issues"
+  },
+  "homepage": "https://github.com/Micheal5699/My-sel-ci-cd-aut#readme",
+  "devDependencies": {
+    "cypress": "^12.17.2"
+  }
+}
