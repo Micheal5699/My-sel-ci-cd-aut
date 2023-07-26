@@ -35,5 +35,5 @@ jobs:
 
       # Add the steps you want to run on the schedule here
       # For example, you can run a specific script:
-      # - name: Run scheduled script
-      #   run: ./path/to/your/script.sh 
+      - name: Run scheduled script
+        run: ./path/to/your/script.sh 
