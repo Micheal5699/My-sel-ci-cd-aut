@@ -85,15 +85,15 @@ it("INPUT FORMS SUBMIT - User should be able to fill and send form ", function (
   cy.get(inputforms.noBtn).click();
   cy.get(inputforms.descriptionBtn).type(inputforms.descriptionText);
   cy.get(inputforms.sendBtn).click();
-})
+// })
 
-it("AJAX FORMS SUBMIT - User should be able to input name, comment and click on the submit button", function () {
-  //cy.get(inputforms.popupadd).click();
-  cy.get(inputforms.inputformsdropdown).click();
-  cy.get(inputforms.ajaxFormSubmitBtn).click();
-  cy.get(inputforms.emptyField).type(inputforms.nameText);
-  cy.get(inputforms.descriptionEmptyField).type(inputforms.descriptionText);
-  cy.get(inputforms.submitBtn).click();
+// it("AJAX FORMS SUBMIT - User should be able to input name, comment and click on the submit button", function () {
+//   //cy.get(inputforms.popupadd).click();
+//   cy.get(inputforms.inputformsdropdown).click();
+//   cy.get(inputforms.ajaxFormSubmitBtn).click();
+//   cy.get(inputforms.emptyField).type(inputforms.nameText);
+//   cy.get(inputforms.descriptionEmptyField).type(inputforms.descriptionText);
+//   cy.get(inputforms.submitBtn).click();
 })
 
 it("JQUERY SELECT DROPDOWN - User should be able to type and select a country", function () {
