@@ -67,7 +67,7 @@ it("JAVASCRIPT ALERT - User should be able to confirm all popups", function () {
     cy.get(alertsAndModals.alertsAndModalsBtn).click();
     cy.get(alertsAndModals.javascriptAlert).click()
     cy.get(alertsAndModals.javaScriptBox1).click()
-    cy.get(alertsAndModals.javaScriptBox2).click()
+    cy.get(alertsAndModals.javaScriptBox223).click().type()
     //cy.get(alertsAndModals.javaScriptBox3).click()
 })
 
