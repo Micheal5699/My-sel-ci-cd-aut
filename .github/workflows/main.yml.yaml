@@ -13,17 +13,16 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Add your desired build and deployment steps here
-      # For example, if you have a Node.js project:
-      # - name: Install dependencies
-      #   run: npm install
-      # - name: Build
-      #   run: npm run build
-      # - name: Deploy
-      #   run: npm run deploy
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: npm run --config cypress.config.js
+        uses: cypress-io/github-action@v4
+        with:
+          # Specify Browser 
+          browser: chrome
 
 # The cron job to schedule the pipeline execution
-# In this example, the pipeline runs every 5 minuites (UTC)
+# In this example, the pipeline runs every day at 2:30 AM (UTC)
 # You can adjust the cron schedule according to your needs
 # For help with cron schedules, visit https://crontab.guru/
   scheduled_job:
