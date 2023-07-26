@@ -1,0 +1,13 @@
+name: daily report
+
+on:
+    schedule:
+      - cron: '*/5 * * * *'
+    workflow_dispatch:
+  
+jobs:
+    my-jobs:
+      runs-on: ubuntu-latest
+      steps:
+        - name: My-first-shedule
+          run: echo "This is my first shedule run"
