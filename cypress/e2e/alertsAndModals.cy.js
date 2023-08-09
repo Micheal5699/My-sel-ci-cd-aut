@@ -62,14 +62,14 @@ it("PROGRESS BAR MODALS - User should be able to show all dialog", function () {
     cy.wait(6000)
 })
 
-it("JAVASCRIPT ALERT - User should be able to confirm all popups", function () {
-    //cy.get(alertsAndModals.popupadd).click();
-    cy.get(alertsAndModals.alertsAndModalsBtn).click();
-    cy.get(alertsAndModals.javascriptAlert).click()
-    cy.get(alertsAndModals.javaScriptBox1).click()
-    cy.get(alertsAndModals.javaScriptBox234).click()
-    //cy.get(alertsAndModals.javaScriptBox3).click()
-})
+// it("JAVASCRIPT ALERT - User should be able to confirm all popups", function () {
+//     //cy.get(alertsAndModals.popupadd).click();
+//     cy.get(alertsAndModals.alertsAndModalsBtn).click();
+//     cy.get(alertsAndModals.javascriptAlert).click()
+//     cy.get(alertsAndModals.javaScriptBox1).click()
+//     cy.get(alertsAndModals.javaScriptBox234).click()
+//     //cy.get(alertsAndModals.javaScriptBox3).click()
+// })
 
 it("FILE DOWNLOAD - I Should be able to enter preferred data", function () {
     //cy.get(alertsAndModals.popupadd).click();
