@@ -1,16 +1,13 @@
-name: Pipeline with Cron Schedule
+name: Cypress Tests using Cypress Docker Image
 
-on:
-  push: # This will trigger the pipeline when code is pushed to the repository
-    branches:
-      - main # Adjust the branch name if necessary
+on: [push]
 
 jobs:
-  build:
+  cypress-run:
     runs-on: ubuntu-latest
-
+    container: cypress/browsers:node12.18.3-chrome87-ff82
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v2
 
       # Install NPM dependencies, cache them correctly
@@ -20,20 +17,3 @@ jobs:
         with:
           # Specify Browser 
           browser: chrome
-
-# The cron job to schedule the pipeline execution
-# In this example, the pipeline runs every day at 2:30 AM (UTC)
-# You can adjust the cron schedule according to your needs
-# For help with cron schedules, visit https://crontab.guru/
-  scheduled_job:
-    runs-on: ubuntu-latest
-    needs: build
-    if: ${{ github.repository_owner == 'Micheal5699' && github.event_name == '*/5 * * * *' }}
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      # Add the steps you want to run on the schedule here
-      # For example, you can run a specific script:
-      - name: Run scheduled script
-        run: ./path/to/your/script.sh 
